@@ -1,0 +1,166 @@
+#include <stdio.h>
+#include <locale.h>
+
+int
+main ()
+{
+  int bebida, prato, sobremesa, total = 0;
+
+  setlocale (LC_ALL, "portuguese");
+
+  do
+    {
+      printf ("1 - Coca-Cola.......R$ 5.00\n");
+      printf ("2 - Guaraná.........R$ 3.00\n");
+      printf ("3 - Taubaiana.......R$ 2.00\n");
+      printf ("Qual bebida desejada? ");
+      scanf ("%d", &bebida);
+
+      if (bebida < 0 || bebida > 3)
+	{
+	  printf ("\n Bebida não listada \n\n");
+	}
+
+    }
+  while (!(bebida > 0 && bebida < 4));
+
+
+
+  printf ("\n\n");
+
+
+
+  do
+    {
+      printf ("1 - Espetinho.......R$ 15.00\n");
+      printf ("2 - Macarronada.....R$ 25.00\n");
+      printf ("3 - Feijoada........R$ 60.00\n");
+      printf ("Qual prato desejado? ");
+      scanf ("%d", &prato);
+
+      if (prato < 0 || prato > 3)
+	{
+	  printf ("\n Prato não listado \n\n");
+	}
+
+    }
+  while (!(prato > 0 && prato < 4));
+
+
+  printf ("\n\n");
+
+
+  do
+    {
+      printf ("1 - Brigadeiro......R$ 10.00\n");
+      printf ("2 - Sorvete.........R$ 15.00\n");
+      printf ("3 - Bolo............R$ 13.00\n");
+      printf ("Qual sobremesa desejada? ");
+      scanf ("%d", &sobremesa);
+
+      if (sobremesa < 0 || sobremesa > 3)
+	{
+	  printf ("\n Sobremesa não listada \n\n");
+	}
+
+    }
+  while (!(sobremesa > 0 && sobremesa <= 3));
+  
+  printf ("\n\n");
+
+ /******Bebida*********/
+
+  if (bebida == 1)
+    {
+      total += 5;
+    }
+  else if (bebida == 2)
+    {
+      total += 3;
+    }
+  else
+    {
+      total += 2;
+    }
+
+
+/******Prato*********/
+
+  if (prato == 1)
+    {
+      total += 15;
+    }
+  else if (prato == 2)
+    {
+      total += 25;
+    }
+  else
+    {
+      total += 60;
+    }
+
+/******Sobremesa*******/
+
+  if (sobremesa == 1)
+    {
+      total += 10;
+    }
+  else if (sobremesa == 2)
+    {
+      total += 15;
+    }
+  else
+    {
+      total += 13;
+    }
+
+ 
+
+ /******Bebida*********/
+
+    if (bebida == 1)
+    {
+      printf ("A bebida escolhida foi a Coca-Cola, ");
+    }
+  else if (bebida == 2)
+    {
+      printf ("A bebida escolhida foi o Guaraná, ");
+    }
+  else
+    {
+      printf ("A bebida escolhida foi a Taubaiana, ");
+    }
+
+/******Prato*********/
+
+  if (prato == 1)
+    {
+        printf ("o prato escolhida foi o espetinho, ");
+    }
+  else if (prato == 2)
+    {
+        printf ("o prato escolhida foi a macarronada, ");
+    }
+  else
+    {
+      printf ("o prato escolhida foi a feijoada, ");
+    }
+
+/******Sobremesa*******/
+
+  if (sobremesa == 1)
+    {
+      printf ("a sobremesa escolhida foi o brigadeiro, ");
+    }
+  else if (sobremesa == 2)
+    {
+      printf ("a sobremesa escolhida foi o sorvete, ");
+    }
+  else
+    {
+      printf ("a sobremesa escolhida foi o bolo, ");
+    }
+
+    printf("dando um total de R$ %d.00", total);
+
+}
