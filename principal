@@ -135,15 +135,15 @@ main ()
 
   if (prato == 1)
     {
-        printf ("o prato escolhida foi o espetinho, ");
+        printf ("o prato escolhido foi o espetinho, ");
     }
   else if (prato == 2)
     {
-        printf ("o prato escolhida foi a macarronada, ");
+        printf ("o prato escolhido foi a macarronada, ");
     }
   else
     {
-      printf ("o prato escolhida foi a feijoada, ");
+      printf ("o prato escolhido foi a feijoada, ");
     }
 
 /******Sobremesa*******/
